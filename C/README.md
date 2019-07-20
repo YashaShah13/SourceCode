@@ -1,0 +1,2 @@
+# ParallelProgramming
+These Programs computes addition of integer elements in a given array and computes average using parallel processing techniques in C Language. Programs divides array of integers and distributes task among available processors in a multiprocessor environment. Processors communicate through various synchronous and asynchronous send/receive functions and various broadcast functions like gather(), scatter(). Processors also perform synchronization functions to make coordination among them.
