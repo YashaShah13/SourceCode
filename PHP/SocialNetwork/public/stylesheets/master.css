@@ -1,0 +1,29 @@
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+body{
+  background: rgba(123, 23, 3, 0.1);
+}
+img{
+  width: 100%;
+}
+nav{
+  background: pink;
+  font-size: 0;
+}
+nav a{
+  font-size: 2vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  padding: 5px;
+}
+
+.this-page{
+  background: skyblue;
+}
