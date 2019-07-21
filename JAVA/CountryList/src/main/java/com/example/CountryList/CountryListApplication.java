@@ -1,21 +1,22 @@
-package com.example.CoutryListApplicaiton1;
+package com.example.CountryList;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 
 @SpringBootApplication
-public class CoutryListApplicaiton1Application {
+public class CountryListApplication {
 
 	public static void main(String[] args) {
+		ApplicationContext context=SpringApplication.run(CountryListApplication.class, args);
 		
-		SpringApplication.run(CoutryListApplicaiton1Application.class, args);
 		
 		
-		CountryRepo list = new CountryRepo();
+		CountryRepo countryRepo= context.getBean(CountryRepo.class);
+		
 		String countryCode; // Key
 		String countryName;
 		String continent;
@@ -64,7 +65,7 @@ public class CoutryListApplicaiton1Application {
 					countryPopulation = input.nextInt();
 					Country country = new Country(countryCode, countryName, continent, countryPopulation);
 
-					list.addCountry(country);
+					countryRepo.addCountry(country);
 
 				}
 					break;
@@ -82,7 +83,7 @@ public class CoutryListApplicaiton1Application {
 					valid = true;
 					System.out.println("Enter Country Code:");
 					countryCode = input.nextLine().toUpperCase();
-					list.removeCountry(countryCode);
+					countryRepo.removeCountry(countryCode);
 
 				}
 					break;
@@ -90,7 +91,7 @@ public class CoutryListApplicaiton1Application {
 				case 'p': {
 					
 					valid = true;
-					list.printCountries();
+					countryRepo.printCountries();
 
 				}
 					break;
@@ -101,7 +102,7 @@ public class CoutryListApplicaiton1Application {
 					System.out.println("Enter Country Code:");
 					countryCode = input.nextLine().toUpperCase();
 
-					Country country = list.getCountry(countryCode);
+					Country country = countryRepo.getCountry(countryCode);
 		
 					if (country != null) {
 						System.out.println("Countrycode: " + country.getCountryCode() + "\nCountryname: "
@@ -121,5 +122,6 @@ public class CoutryListApplicaiton1Application {
 		}
 
 	}
+	
 
 }

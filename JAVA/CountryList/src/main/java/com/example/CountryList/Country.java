@@ -1,7 +1,7 @@
-package com.example.CoutryListApplicaiton1;
+package com.example.CountryList;
 
 public class Country {
-
+	
 	private String countryCode = "NCC";
 	private String countryName = "NCN";
 	private int countryPopulation = 0;
@@ -52,5 +52,6 @@ public class Country {
 		return getCountryCode() + "             " + getCountryName() + "    " + getCountryPopulation() + "    "
 				+ getContinent();
 	}
+
 
 }

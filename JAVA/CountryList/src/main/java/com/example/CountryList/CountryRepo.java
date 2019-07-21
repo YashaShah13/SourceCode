@@ -1,10 +1,14 @@
-package com.example.CoutryListApplicaiton1;
+package com.example.CountryList;
 
 import java.util.Map;
 import java.util.TreeMap;
 
-public class CountryRepo {
+import org.springframework.stereotype.Repository;
 
+
+@Repository
+public class CountryRepo {
+	
 	private Map<String, Country> countries;
 
 	public CountryRepo() {
@@ -66,5 +70,6 @@ public class CountryRepo {
 		return country;
 
 	}
+
 
 }
