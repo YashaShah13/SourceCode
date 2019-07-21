@@ -13,8 +13,8 @@ public class Linklist {
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Enter Key : ");
-			int x = input.nextInt();
-			node = new Node(x);
+			int data = input.nextInt();
+			node = new Node(data);
 			list.InsertatBack(list, node);
 		}
 

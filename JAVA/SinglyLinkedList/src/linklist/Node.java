@@ -6,8 +6,8 @@ public class Node {
 	Node prev = null;
 	int key;
 
-	public Node(int x) {
+	public Node(int data) {
 
-		this.key = x;
+		this.key = data;
 	}
 }

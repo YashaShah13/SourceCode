@@ -17,10 +17,12 @@ public class FindRepeated {
 
 		String string = input.nextLine();
 
-		findDuplicates(string);
+		if(!findDuplicates(string)) {
+			System.out.println("Duplicate not found");
+		}
 	}
 
-	private static void findDuplicates(String string) {
+	private static boolean findDuplicates(String string) {
 		// TODO Auto-generated method stub
 
 		Map<Character, Integer> charMap = new HashMap<Character, Integer>(); // unique characters as key and their count
@@ -37,12 +39,17 @@ public class FindRepeated {
 			}
 
 		}
+		
+		boolean duplicateFound=false;
 
 		for (Character chIterator : charMap.keySet()) { // for each character in key set
-			if (charMap.get(chIterator) > 0)
+			if (charMap.get(chIterator) > 0) {
+				duplicateFound=true;
 				System.out.println("Duplicate found: " + chIterator);
+			}
 		}
-
+		
+		return duplicateFound;
 	}
 
 }

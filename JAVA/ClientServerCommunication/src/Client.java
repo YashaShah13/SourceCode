@@ -8,19 +8,19 @@ public class Client {
 
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		// TODO Auto-generated method stub
-		int sendItem, tp;
-		Scanner sc = new Scanner(System.in);
+		int sendItem, receivedItem;
+		Scanner scanner = new Scanner(System.in);
 
 		Socket socket = new Socket("127.0.0.1", 8992);
-		Scanner sc1 = new Scanner(socket.getInputStream());
+		Scanner socketScanner = new Scanner(socket.getInputStream());
 		System.out.println("Input:");
 
-		sendItem = sc.nextInt();
+		sendItem = scanner.nextInt();
 		PrintStream printStream = new PrintStream(socket.getOutputStream());
 		printStream.println(sendItem);
 
-		tp = sc1.nextInt();
-		System.out.println("Output: " + tp);
+		receivedItem = socketScanner.nextInt();
+		System.out.println("Output: " + receivedItem);
 
 		socket.close();
 	}

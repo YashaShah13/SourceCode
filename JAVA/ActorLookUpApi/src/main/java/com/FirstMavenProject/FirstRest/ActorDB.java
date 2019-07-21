@@ -24,12 +24,12 @@ public class ActorDB {
 
 			while (resultSet.next()) {
 
-				actor a = new Actor();
-				a.setActorID(resultSet.getInt(1));
-				a.setFirstName(resultSet.getString(2));
-				a.setLastName(resultSet.getString(3));
+				Actor actor = new Actor();
+				actor.setActorID(resultSet.getInt(1));
+				actor.setFirstName(resultSet.getString(2));
+				actor.setLastName(resultSet.getString(3));
 
-				actors.add(a);
+				actors.add(actor);
 
 			}
 
@@ -46,26 +46,26 @@ public class ActorDB {
 
 	}
 
-	public actor getActor(int id) {
+	public Actor getActor(int id) {
 
 		System.out.println("inside actor.getActor method");
-		for (actor a : actors) {
+		for (Actor actor : actors) {
 
-			if (a.getActorID() == id)
-				return a;
+			if (actor.getActorID() == id)
+				return actor;
 
 		}
 		return null;
 	}
 
-	public void addActor(actor a) {
+	public void addActor(Actor actor) {
 
 		try {
 
 			PreparedStatement prepatedStatement = connection.prepareStatement("insert into sakila.actor values (?,?,?)");
-			prepatedStatement.setInt(1, a.getActorID());
-			prepatedStatement.setString(2, a.getFirstName());
-			prepatedStatement.setString(3, a.getLastName());
+			prepatedStatement.setInt(1, actor.getActorID());
+			prepatedStatement.setString(2, actor.getFirstName());
+			prepatedStatement.setString(3, actor.getLastName());
 			prepatedStatement.executeUpdate();
 		} catch (Exception e) {
 			System.out.println(e);
@@ -73,14 +73,14 @@ public class ActorDB {
 
 	}
 
-	public void updateActor(actor a) {
+	public void updateActor(Actor actor) {
 
 		try {
 			PreparedStatement prepatedStatement = connection
 					.prepareStatement("update  sakila.actor set first_name=?,last_name=? where actor_id=?");
-			prepatedStatement.setString(1, a.getFirstName());
-			prepatedStatement.setString(2, a.getLastName());
-			prepatedStatement.setInt(3, a.getActorID());
+			prepatedStatement.setString(1, actor.getFirstName());
+			prepatedStatement.setString(2, actor.getLastName());
+			prepatedStatement.setInt(3, actor.getActorID());
 			prepatedStatement.executeUpdate();
 		} catch (Exception e) {
 			System.out.println("e");
