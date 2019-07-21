@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.models.FilmModel;
-import com.repository.FilmRepository;
+import com.repositories.FilmRepository;
 
 @Service
 public class FilmService {
+	
 	@Autowired
 	private FilmRepository filmRepository;
 
@@ -18,5 +19,6 @@ public class FilmService {
 		List<FilmModel> filmList = (List<FilmModel>) filmRepository.findAll();
 		return filmList;
 	}
+
 
 }

@@ -1,19 +1,16 @@
 package com.services;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.models.ActorModel;
-import com.repository.ActorRepository;
+import com.repositories.ActorRepository;
 
 @Service
 public class ActorService {
-
+	
 	@Autowired
 	private ActorRepository actorRepository;
 
@@ -35,5 +32,6 @@ public class ActorService {
 		List<ActorModel> list = (List<ActorModel>) actorRepository.findByFirstName(name);
 		return list;
 	}
+
 
 }

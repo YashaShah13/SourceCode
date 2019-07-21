@@ -3,10 +3,8 @@ package com.models;
 import java.util.Collection;
 import java.util.LinkedList;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -16,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 @Entity
 @Table(name = "film")
 public class FilmModel {
+	
 
 	@Id
 	@Column(name = "film_id")
@@ -73,5 +72,6 @@ public class FilmModel {
 	public void setRating(String rating) {
 		this.rating = rating;
 	}
+
 
 }

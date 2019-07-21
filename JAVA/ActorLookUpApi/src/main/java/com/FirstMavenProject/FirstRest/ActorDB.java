@@ -19,7 +19,7 @@ public class ActorDB {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sakila", "root", "yash1234");
-			Statement prepatedStatement = connection.createStatement();
+			Statement prepatedStatement = (Statement) connection.createStatement();
 			ResultSet resultSet = prepatedStatement.executeQuery("select * from sakila.actor");
 
 			while (resultSet.next()) {
