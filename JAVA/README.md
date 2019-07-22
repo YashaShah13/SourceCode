@@ -4,10 +4,10 @@
 Spring Boot Microservice developed using Spring MVC, Hibernate and MySQL database. Performs data retrieval for Actors and Films resources. It handles many to many relationship between Actor and Films entites. Response is provided in JSON format for GET requests. 
 # Algorithms
 Demonstrates use of various data structures.
-* FindRepeated: Finds repeated characters in string. uses HashMap.
-* FirstNonRepeatedChar: Finds first non-repeated character in string. uses HashMap.
-* RemoveCharsFromString: Removes a set of characters from a given string. uses HashSet.
-* ReverseWordOrder: Reverses order of words in a string. Uses StringBuilder.
+* **FindRepeated**: Finds repeated characters in string. uses HashMap.
+* **FirstNonRepeatedChar**: Finds first non-repeated character in string. uses HashMap.
+* **RemoveCharsFromString**: Removes a set of characters from a given string. uses HashSet.
+* **ReverseWordOrder**: Reverses order of words in a string. Uses StringBuilder.
 # AndroidAsyncTask
 Android project to demostrate multi-threading to perform background tasks to keep the application responsive.
 # SinglyLinkedList
