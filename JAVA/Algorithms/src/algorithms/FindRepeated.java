@@ -8,29 +8,19 @@ import java.util.Map;
 
 public class FindRepeated {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.print("Enter string :");
+	/* Find duplicate character from given string o(n) */
 
-		@SuppressWarnings("resource")
-		Scanner input = new Scanner(System.in);
-
-		String string = input.nextLine();
-
-		if(!findDuplicates(string)) {
-			System.out.println("Duplicate not found");
-		}
-	}
-
-	private static boolean findDuplicates(String string) {
+	public static boolean findDuplicates(String inputString) {
 		// TODO Auto-generated method stub
 
+		int inputStringLen = inputString.length();
+		boolean duplicateFound = false;
 		Map<Character, Integer> charMap = new HashMap<Character, Integer>(); // unique characters as key and their count
-		// as
-		// value
+																											// as value
 
-		for (int i = 0; i < string.length(); i++) {
-			Character ch = string.charAt(i);
+		for (int i = 0; i < inputStringLen; i++) {
+
+			Character ch = inputString.charAt(i);
 
 			if (charMap.containsKey(ch) == false) {
 				charMap.put(ch, 0);
@@ -39,16 +29,15 @@ public class FindRepeated {
 			}
 
 		}
-		
-		boolean duplicateFound=false;
 
 		for (Character chIterator : charMap.keySet()) { // for each character in key set
+
 			if (charMap.get(chIterator) > 0) {
-				duplicateFound=true;
+				duplicateFound = true;
 				System.out.println("Duplicate found: " + chIterator);
 			}
 		}
-		
+
 		return duplicateFound;
 	}
 
