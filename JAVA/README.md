@@ -5,7 +5,9 @@ Spring Boot Microservice developed using Spring MVC, Hibernate and MySQL databas
 # Algorithms
 Finds repeated characters in string (uses Map) and reverses string without use of any data structures.
 * FindRepeated: Finds repeated characters in string. uses HashMap.
-* FindNonRepeatedChar: Removes a set of characters from a given string. uses HashSet.
+* FirstNonRepeatedChar: Finds first non-repeated character in string. uses HashMap.
+* RemoveCharsFromString: Removes a set of characters from a given string. uses HashSet.
+* ReverseWordOrder: Reverses order of words in a string. Uses StringBuilder.
 # AndroidAsyncTask
 Android project to demostrate multi-threading to perform background tasks to keep the application responsive.
 # SinglyLinkedList
