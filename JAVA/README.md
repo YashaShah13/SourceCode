@@ -4,7 +4,7 @@
 Spring Boot Microservice developed using Spring MVC, Hibernate and MySQL database. Performs data retrieval for Actors and Films resources. It handles many to many relationship between Actor and Films entites. Response is provided in JSON format for GET requests. 
 # Algorithms
 Finds repeated characters in string (uses Map) and reverses string without use of any data structures.
-**FindRepeated**
+*FindRepeated
 # AndroidAsyncTask
 Android project to demostrate multi-threading to perform background tasks to keep the application responsive.
 # SinglyLinkedList
